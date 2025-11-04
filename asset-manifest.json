@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Abhinay_Portfolio/static/css/main.4e58f8df.css",
+    "main.js": "/Abhinay_Portfolio/static/js/main.959a9b42.js",
+    "index.html": "/Abhinay_Portfolio/index.html",
+    "main.4e58f8df.css.map": "/Abhinay_Portfolio/static/css/main.4e58f8df.css.map",
+    "main.959a9b42.js.map": "/Abhinay_Portfolio/static/js/main.959a9b42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e58f8df.css",
+    "static/js/main.959a9b42.js"
+  ]
+}
