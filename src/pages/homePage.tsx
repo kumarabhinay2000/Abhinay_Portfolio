@@ -20,20 +20,17 @@ const containerVariants = {
   visible: { transition: { staggerChildren: 0.18, delayChildren: 0.6 } },
 };
 
-const wordVariants = {
+const wordVariants: Variants = {
   hidden: { opacity: 0, y: 60, skewY: 4 },
   visible: {
     opacity: 1, y: 0, skewY: 0,
-    transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+    transition: { duration: 0.75, ease: 'easeOut' },
   },
 };
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: (d: number) => ({
-    opacity: 1, y: 0,
-    transition: { duration: 0.6, delay: d, ease: [0.25, 0.46, 0.45, 0.94] as const },
-  }),
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
 function HeroSection() {
@@ -49,10 +46,10 @@ function HeroSection() {
         <div className={styles.heroLeft}>
           <motion.p
             className={styles.heroLabel}
-            custom={0.3}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
+            transition={{ delay: 0.3 }}
           >
             <span className={styles.heroDot} />
             Software Engineer
@@ -79,20 +76,20 @@ function HeroSection() {
 
           <motion.p
             className={styles.heroSub}
-            custom={1.3}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
+            transition={{ delay: 1.3 }}
           >
             Backend systems &middot; Geospatial &middot; AI/ML &middot; Scalable Web
           </motion.p>
 
           <motion.p
             className={styles.heroDesc}
-            custom={1.5}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
+            transition={{ delay: 1.5 }}
           >
             I design and build scalable software systems, geospatial data
             platforms, and AI-powered applications that solve real-world
@@ -101,10 +98,10 @@ function HeroSection() {
 
           <motion.div
             className={styles.heroCtas}
-            custom={1.75}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
+            transition={{ delay: 1.75 }}
           >
             <Button to="/work" showArrow size="lg">
               View My Work
