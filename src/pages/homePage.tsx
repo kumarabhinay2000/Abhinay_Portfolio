@@ -1,7 +1,7 @@
 import { Suspense, lazy, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { projects } from '../data/projects';
 import { experiences } from '../data/experience';
 import { featuredTechnologies } from '../data/skills';
@@ -28,11 +28,11 @@ const wordVariants = {
   },
 };
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: (d: number) => ({
     opacity: 1, y: 0,
-    transition: { duration: 0.6, delay: d, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
+    transition: { duration: 0.6, delay: d, ease: [0.25, 0.46, 0.45, 0.94] as const },
   }),
 };
 
