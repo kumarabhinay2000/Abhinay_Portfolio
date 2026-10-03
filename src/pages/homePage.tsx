@@ -24,7 +24,7 @@ const wordVariants = {
   hidden: { opacity: 0, y: 60, skewY: 4 },
   visible: {
     opacity: 1, y: 0, skewY: 0,
-    transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
   },
 };
 
@@ -32,7 +32,7 @@ const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: (d: number) => ({
     opacity: 1, y: 0,
-    transition: { duration: 0.6, delay: d, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.6, delay: d, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
   }),
 };
 
