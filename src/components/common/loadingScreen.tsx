@@ -11,7 +11,6 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    let current = 0;
     const steps = [
       { target: 30, delay: 100 },
       { target: 60, delay: 200 },
@@ -32,7 +31,6 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       const step = steps[stepIndex];
       setTimeout(() => {
         setProgress(step.target);
-        current = step.target;
         stepIndex++;
         runStep();
       }, step.delay);
